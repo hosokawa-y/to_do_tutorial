@@ -1,22 +1,17 @@
 <template>
-  <FirstView class="travel-map"/>
+  <!-- router経由で呼び出されたcomponentはrouter-viewの領域に反映される -->
+  <router-view></router-view>
 </template>
 
-<script>
-import FirstView from "./components/FirstView.vue";
+<script lang="ts">
+import { defineComponent, provide } from 'vue'
+import TodoStore, { todoKey } from '@/store/todo'
 
-export default {
+export default defineComponent({
   name: 'App',
-
-  components: {
-    TravelMap,
+  setup() {
+    provide(todoKey, TodoStore)
   },
-}
+})
 </script>
-
-<style lang="scss" scoped>
-.travel-map {
-  height: 800px;
-}
-</style>
 
