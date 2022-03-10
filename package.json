@@ -8,9 +8,11 @@
     "updateLib": "rm -rf ./node_modules/@delightone && yarn install"
   },
   "dependencies": {
-    "vue": "^3.2.26"
+    "vue": "^3.2.26",
+    "vue-router": "4"
   },
   "devDependencies": {
+    "@types/node": "^17.0.21",
     "@vitejs/plugin-vue": "^1.2.2",
     "sass": "^1.32.13",
     "sass-loader": "^10.0.0",
