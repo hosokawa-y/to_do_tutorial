@@ -1,6 +1,6 @@
 <template>
   <!-- router経由で呼び出されたcomponentはrouter-viewの領域に反映される -->
-  <router-view></router-view>
+  <router-view />
 </template>
 
 <script lang="ts">

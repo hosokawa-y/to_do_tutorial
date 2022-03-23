@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { DeepReadonly } from 'vue'
 
 export type Status = 'waiting' | 'working' | 'completed' | 'pending'
