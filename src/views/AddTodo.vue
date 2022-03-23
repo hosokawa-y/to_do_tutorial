@@ -58,12 +58,16 @@ export default defineComponent({
 
     const router = useRouter()
 
+    // リアクティブな状態（その値が監視され、変更が検知される状態）を作る
+    // フォームで入力された値とバインディングされる
     const data = reactive<Params>({
       title: '',
       description: '',
       status: 'waiting',
     })
 
+    // フォームが送信されたときの処理
+    // addTodoでTODOを新規作成したら一覧ページに遷移する
     const onSubmit = () => {
       const { title, description, status } = data
       todoStore.addTodo({
