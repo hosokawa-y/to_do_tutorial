@@ -15,7 +15,8 @@
 
 <script lang="ts">
 import { Todo } from "@/store/todo/types";
-import { computed, defineComponent, PropType, isRef, Ref, ref } from "vue";
+import { defineComponent, PropType } from "vue";
+import { useFormatDate } from "@/composables/use-format-date";
 
 export default defineComponent({
   // propsは親コンポーネントから子コンポーネントに渡されるデータ
@@ -37,20 +38,6 @@ export default defineComponent({
     const clickTitle = () => {
       emit("clickTitle", props.todo.id);
     };
-
-    // useFormatDate関数はリアクティブな要素とそうでない要素どちらも受け取る
-    const useFormatDate = (date: Date | Ref<Date>) => {
-      // 受け取った要素がリアクティブかどうかはisRef()で判断する。
-      // リアクティブじゃなかったらref()でリアクティブ化してから使用する。ref()は値をオブジェクト化する
-      const dateRef = isRef(date) ? date : ref(date)
-      // computed関数は、中で利用されているリアクティブな値が更新されたときのみ計算結果が再評価される
-      return computed(() => {
-        // ref()でリアクティブ化した値にアクセスするにはdeteRef.valueのようにアクセスする
-        return `${dateRef.value.getFullYear()}/${
-          dateRef.value.getMonth() + 1
-        }/${dateRef.value.getDate()}`
-      })
-    }
 
     const formatDate = useFormatDate(props.todo.createdAt)
 
