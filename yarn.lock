@@ -1458,17 +1458,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^2.47.0:
+rollup@^2.47.0, rollup@^2.59.0:
   version "2.70.1"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.70.1.tgz#824b1f1f879ea396db30b0fc3ae8d2fead93523e"
   integrity sha512-CRYsI5EuzLbXdxC6RnYhOuRdtz4bhejPMSWjsFLfVM/7w/85n2szZv6yExqUXsBdz5KT8eoubeyDUDjhLHEslA==
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-rollup@^2.59.0:
-  version "2.67.2"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-2.67.2.tgz"
-  integrity sha512-hoEiBWwZtf1QdK3jZIq59L0FJj4Fiv4RplCO4pvCRC86qsoFurWB4hKQIjoRf3WvJmk5UZ9b0y5ton+62fC7Tw==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -1705,10 +1698,10 @@ vite-plugin-eslint@^1.3.0:
     eslint "^7.26.0"
     rollup "^2.47.0"
 
-vite@^2.3.3:
-  version "2.8.3"
-  resolved "https://registry.npmjs.org/vite/-/vite-2.8.3.tgz"
-  integrity sha512-967klrEiG7HEsN7fQYYVETs5495Iu6GpI7YyxoO5yVTJCRxjV8HhWgNWKgrbazjoOB9DQuztL53/nUoNqHNsWg==
+vite@^2.8.6:
+  version "2.8.6"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.8.6.tgz#32d50e23c99ca31b26b8ccdc78b1d72d4d7323d3"
+  integrity sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==
   dependencies:
     esbuild "^0.14.14"
     postcss "^8.4.6"
