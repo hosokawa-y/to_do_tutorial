@@ -39,7 +39,7 @@ export default defineComponent({
       emit("clickTitle", props.todo.id);
     };
 
-    const formatDate = useFormatDate(props.todo.createdAt)
+    const formatDate = useFormatDate(props.todo.createdAt);
 
     return {
       clickDelete,
